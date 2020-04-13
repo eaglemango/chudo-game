@@ -61,7 +61,7 @@ def process_attempt():
             elif not suggestion_result and current_game.attempts_left != 0:
                 return {
                     "result": config.ReturnCodes.UNSUCCESSFUL_TRY.value,
-                    "data": current_game.get_hidden_word()
+                    "data": current_game.attempts_left
                 }
 
             elif current_game.attempts_left == 0:
